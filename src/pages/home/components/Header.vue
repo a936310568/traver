@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
     /* @import url('../../../assets/styles/varibles.styl'); */
     .header {
       display: flex;
