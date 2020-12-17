@@ -7,7 +7,7 @@
       输入城市或游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{this.city}}
       <span class="arrow-right">></span>
     </div>
   </div>
@@ -15,7 +15,11 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  // 子组件接收到city
+  props: {
+    city: String
+  }
 }
 </script>
 
