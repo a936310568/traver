@@ -6,10 +6,12 @@
     <div class="header-input">
       输入城市或游玩主题
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="arrow-right">></span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="arrow-right">></span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -59,5 +61,8 @@ export default {
     .arrow-right {
       font-size: .2rem;
       color: #ccc;
+    }
+    .header-right {
+      color #fff
     }
 </style>
