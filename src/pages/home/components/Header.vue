@@ -6,20 +6,26 @@
     <div class="header-input">
       输入城市或游玩主题
     </div>
-    <div class="header-right">
-      城市
-      <span class="arrow-right">></span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="arrow-right">></span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  // 子组件接收到city
+  props: {
+    city: String
+  }
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
     /* @import url('../../../assets/styles/varibles.styl'); */
     .header {
       display: flex;
@@ -55,5 +61,8 @@ export default {
     .arrow-right {
       font-size: .2rem;
       color: #ccc;
+    }
+    .header-right {
+      color #fff
     }
 </style>
