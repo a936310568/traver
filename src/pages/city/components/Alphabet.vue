@@ -1,23 +1,35 @@
 <template>
     <ul class="list">
         <li class="item"
-            v-for="(item, key) of cities"
-            :key="key"
+            id="item"
+            v-for="item of letters"
+            :key="item"
+            :ref="item"
             @touchstart="handleTouchStart"
             @touchmove="handleTouchMove"
             @touchend="handleTouchEnd"
-            @click="handleLetterClick"
+            @click="handleLetterClick(item)"
             >
-            {{key}}
+            {{item}}
             </li>
     </ul>
 </template>
 
 <script>
+// const item = document.getElementById("item")
 export default {
   name: 'CityAlphabet',
   props: {
     cities: Object
+  },
+  computed: {
+    letters () {
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
+      }
+      return letters
+    }
   },
   data () {
     return {
@@ -26,14 +38,20 @@ export default {
     }
   },
   methods: {
-    handleLetterClick (e) {
-      this.$emit('change', e.target.innerText)
+    handleLetterClick (value) {
+      this.$emit('change', value)
     },
     handleTouchStart () {
       this.touchStatus = true
     },
-    handleTouchMove () {
+    handleTouchMove (e) {
       if (this.touchStatus) {
+        const startY = this.$refs['A'][0].offsetTop
+        const touchY = e.touches[0].clientY - 79
+        const index = Math.floor((touchY - startY) / 19)
+        if (index >= 0 && index < this.letters.length) {
+          this.$emit('change', this.letters[index])
+        }
       }
     },
     handleTouchEnd () {
@@ -55,7 +73,7 @@ export default {
     width .4rem
     bottom 0
     .item
-        line-height .35rem
+        line-height .38rem
         text-align center
         color $bgColor
         font-size .10rem

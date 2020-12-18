@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import Bscroll from 'better-scroll'
+// import BScroll from 'better-scroll'
 export default {
   name: 'CityList',
   props: {
@@ -53,18 +53,20 @@ export default {
     hot: Array,
     letter: String
   },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
-  },
   //   监听letter的变化
   watch: {
     letter () {
+      console.log('letter:', this.letter)
       // this.letter不为空时
       if (this.letter) {
         const element = this.$refs[this.letter][0]
         //   better-scroll内置方法，让屏幕自动滚动到某个元素上
-        this.scroll.scrollToElement(element)
-        console.log(element)
+        // this.scroll.scrollToElement(element)
+        // console.log(element)
+        // console.log(element)
+        // element.scrollIntoView({ behavior: 'smooth' })
+        const y = element.offsetTop
+        window.scrollTo({ top: y, left: 0, behavior: 'smooth' })
       }
     }
   }
