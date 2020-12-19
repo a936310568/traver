@@ -21,7 +21,7 @@ export default {
   name: 'HomeHeader',
   // 子组件接收到city
   props: {
-    city: String
+    // city: String
   },
   computed: {
     ...mapState(['city'])

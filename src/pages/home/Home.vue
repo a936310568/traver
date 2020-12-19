@@ -18,6 +18,7 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 // 导入获取Ajax数据插件
 import axios from 'axios'
+import { mapState } from 'vuex'
 export default {
   name: 'Home',
   components: {
@@ -30,17 +31,22 @@ export default {
   },
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
       weekendList: []
     }
   },
+  computed: {
+    ...mapState(['city'])
+  },
   methods: {
     // 请求ajax数据
     getHomeInfo () {
       // 在config下的index.js中配置proxyTable
-      axios.get('/api/index.json')
+      // 将city放在ajax请求之中
+      axios.get('/api/index.json?city=' + this.city)
       // axios返回的结果是一个promiss对象
         .then(this.getHomeInfoSucc)
     },
@@ -59,7 +65,16 @@ export default {
   },
   mounted () {
     // 当页面挂载好后执行
+    this.lastCity = this.city
     this.getHomeInfo()
+  },
+  // acticated为keep alive执行完之后调用的生命周期钩子
+  activated () {
+    // 当上一次选择的城市和当前切换的城市不一致时，重新发一次Ajax请求
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    }
   }
 }
 </script>
