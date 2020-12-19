@@ -5,7 +5,8 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">杭州</div>
+            <!-- 在main中创建根实例使，把store传进去了，之后store被派发到每一个子组件  -->
+            <div class="button">{{this.city}}</div>
           </div>
         </div>
       </div>
@@ -46,6 +47,7 @@
 
 <script>
 // import BScroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'CityList',
   props: {
@@ -53,17 +55,27 @@ export default {
     hot: Array,
     letter: String
   },
+  computed: {
+    ...mapState(['city'])
+  },
+  methods: {
+    // city为点击事件带出的item.name
+    handleCityClick (city) {
+      // dispatch为调用actions时的方法，changeCity为在actions中定义的方法
+      // this.$store.dispatch('changeCity', city)
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
+  },
   //   监听letter的变化
   watch: {
     letter () {
-      console.log('letter:', this.letter)
       // this.letter不为空时
       if (this.letter) {
         const element = this.$refs[this.letter][0]
         //   better-scroll内置方法，让屏幕自动滚动到某个元素上
         // this.scroll.scrollToElement(element)
-        // console.log(element)
-        // console.log(element)
         // element.scrollIntoView({ behavior: 'smooth' })
         const y = element.offsetTop
         window.scrollTo({ top: y, left: 0, behavior: 'smooth' })

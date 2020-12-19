@@ -11,7 +11,7 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item" v-for="item of list" :key="item.id">
+        <li class="search-item" v-for="item of list" :key="item.id" @click="handleCityClick(innerItem.name)">
             {{item.name}}
         </li>
         <!-- 当list为空时,显示,反之不显示 -->
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import Bscroll from 'better-scroll'
 export default {
   name: 'CitySearch',
@@ -36,6 +37,15 @@ export default {
       list: [],
       timer: null
     }
+  },
+  methods: {
+    // city为点击事件带出的item.name
+    handleCityClick (city) {
+      // dispatch为调用actions时的方法，changeCity为在actions中定义的方法
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
   },
   watch: {
     keyword () {
