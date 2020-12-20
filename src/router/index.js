@@ -4,6 +4,8 @@ import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
 import Detail from '@/pages/detail/Detail'
 
+// import Detail from '@/pages/detail/Detail'
+
 Vue.use(Router)
 
 export default new Router({

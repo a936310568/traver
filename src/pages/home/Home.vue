@@ -11,6 +11,7 @@
 
 <script>
 // 导入组件
+import Detail from '../detail/Detail'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
@@ -27,7 +28,8 @@ export default {
     HomeSwiper,
     HomeIcons,
     HomeRecommend,
-    HomeWeekend
+    HomeWeekend,
+    [Detail.name]: Detail
   },
   data () {
     return {

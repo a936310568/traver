@@ -19,8 +19,10 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
-        loop: true
+        swiperOptions: {
+          pagination: '.swiper-pagination',
+          paginationType: 'fraction'
+        }
       }
     }
   }
