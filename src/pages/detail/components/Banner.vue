@@ -42,7 +42,7 @@ export default {
     position relative
     overflow hidden
     height 0
-    padding-bottom 55%
+    padding-bottom 40%
     .banner-img
       width 100%
     .banner-info
@@ -57,6 +57,7 @@ export default {
       .banner-title
         flex 1
         font-size .20rem
+        padding-bottom 0.05rem
       .banner-number
         padding: 0rem .3rem
         height .4rem
