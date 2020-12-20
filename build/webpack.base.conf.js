@@ -37,6 +37,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
+      'common': resolve('src/common'),
     }
   },
   module: {
@@ -75,7 +76,12 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+       // 配置stylus
+       {
+        test: /.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader'
+      }    
     ]
   },
   node: {
