@@ -1,6 +1,6 @@
 <template>
   <div wrapper>
-  <swiper :options="swiperOptions">
+  <swiper>
     <swiper-slide v-for="item of list" :key="item.id">
         <!-- 冒号进行绑定 -->
         <img class="swiper-img" :src="item.imgUrl" alt="">
@@ -19,8 +19,10 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
-        loop: true
+        swiperOptions: {
+          pagination: '.swiper-pagination',
+          paginationType: 'fraction'
+        }
       }
     }
   }
