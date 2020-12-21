@@ -27,7 +27,7 @@ export default {
   },
   deactivated () {
     window.removeEventListener('scroll', this.handleScroll)
-  }, 
+  },
   methods: {
     handleScroll () {
       const top = document.documentElement.scrollTop
@@ -35,7 +35,7 @@ export default {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = { opacity }
-        this.showAbs = false
+        this.showAbs = falses
       } else {
         this.showAbs = true
       }
