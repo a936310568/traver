@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="https://imgs.qunarzz.com/sight/p0/2005/a6/a68ac89e55d83cdda3.water.jpg_710x360_a86ae978.jpg">
+      <img class="banner-img" src="https://img1.qunarzz.com/travel/d1/1809/33/dd87f86934f20ab5.jpg_r_680x382x95_8851640e.jpg">
       <div class="banner-info">
         <div class="banner-title">洛阳-白马寺 1天跟团游</div>
         <div class="banner-number">
