@@ -1,29 +1,30 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" :src="bannerImg" />
+      <img class="banner-img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=335922598,958094356&fm=26&gp=0.jpg" />
       <div class="banner-info">
-        <div class="banner-title">洛阳-白马寺 1天跟团游</div>
+        <div class="banner-title">洛阳-云南 6天跟团游</div>
         <div class="banner-number">
           > {{bannerImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
 export default {
-  name: 'DetailBanner',
+  name: 'DetailBanners',
   props: {
     bannerImg: String,
     bannerImgs: Array
   },
   data () {
     return {
-      showGallary: false
+      showGallary: false,
+      imgs: ['https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=335922598,958094356&fm=26&gp=0.jpg', 'https://tse4-mm.cn.bing.net/th/id/OIP.VOHLETdCrnHKRb53tL_lDgHaEY?w=324&h=187&c=7&o=5&dpr=1.25&pid=1.7']
     }
   },
   methods: {

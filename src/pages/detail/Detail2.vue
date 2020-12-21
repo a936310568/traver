@@ -1,36 +1,36 @@
 <template>
   <div>
-    <detail-banner
+    <detail-banners
       :bannerImg="bannerImg"
       :bannerImgs="gallaryImgs"
-    ></detail-banner>
+    ></detail-banners>
     <detail-header></detail-header>
     <div class="content">
       <detail-list :list="list"></detail-list>
-      <detail-comment></detail-comment>
+      <detail-comments></detail-comments>
     </div>
   </div>
 </template>
 <script>
-import DetailBanner from './components/Banner'
+import DetailBanners from './components/Banners'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
-import DetailComment from './components/Comment'
+import DetailComments from './components/Comments'
 import axios from 'axios'
 export default {
   name: 'detail',
   components: {
-    DetailBanner,
+    DetailBanners,
     DetailHeader,
     DetailList,
-    DetailComment
+    DetailComments
   },
   data () {
     return {
       bannerImg: '',
       gallaryImgs: [],
       list: [{
-        title: '成人票￥99',
+        title: '成人票￥899',
         children: [{
           title: '成人三馆联票·美团可选'
         }, {
@@ -38,7 +38,7 @@ export default {
         }]
       },
       {
-        title: '学生票￥88',
+        title: '学生票￥788',
         children: [{
           title: '学生三馆联票·美团可选'
         }, {
@@ -46,14 +46,14 @@ export default {
         }]
       },
       {
-        title: '儿童票￥49',
+        title: '儿童票￥549',
         children: [{
           title: '儿童三馆联票·美团可选'
         }, {
           title: '儿童五馆联票·美团可选'
         }]
       }, {
-        title: '特惠票￥66'
+        title: '特惠票￥666'
       }]
     }
   },
