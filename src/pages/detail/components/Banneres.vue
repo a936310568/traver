@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wirrper">
     <div class="banner" @click="handleBannerClick">
       <img class="banner-img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1801275554,897101709&fm=26&gp=0.jpg" />
       <div class="banner-info">

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="Home">
     <!-- 子组件拿到data中返回的city -->
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
