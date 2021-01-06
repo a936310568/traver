@@ -61,12 +61,12 @@ export default {
   methods: {
     getDetailInfo () {
       // axios.get('/api/detail.json?id=' + this.$route.params.id)
-        // axios.get('/api/detail.json', {
-        //   params: {
-        //     id: this.$route.params.id
-        //   }
-        // }).then(this.handleGetDataSucc)
-        this.handleGetDataSucc(detailJson)
+      // axios.get('/api/detail.json', {
+      //   params: {
+      //     id: this.$route.params.id
+      //   }
+      // }).then(this.handleGetDataSucc)
+      this.handleGetDataSucc(detailJson)
     },
     handleGetDataSucc (res) {
       if (res.ret && res.data) {
