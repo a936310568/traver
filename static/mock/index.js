@@ -19,44 +19,44 @@ export const indexJson = {
       }],
     "iconList": [{
       "id": "0001",
-      "imgurl": "//s.qunarzz.com/homenode/images/touchheader/piao.png",
-      "desc": "景点门票"
+      "imgurl": "https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png",
+      "desc": "民宿客栈"
     }, {
       "id": "0002",
-      "imgurl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png",
-      "desc": "酒店"
-    }, {
-      "id": "0003",
-      "imgurl": "////s.qunarzz.com/homenode/images/touchheader/flight.png",
-      "desc": "机票"
-    }, {
-      "id": "0004",
-      "imgurl": "//s.qunarzz.com/homenode/images/touchheader/train.png",
-      "desc": "火车票"
-    }, {
-      "id": "0005",
-      "imgurl": "//s.qunarzz.com/homenode/images/touchheader/package.png",
-      "desc": "度假"
-    }, {
-      "id": "0006",
       "imgurl": "https://picbed.qunarzz.com/83af731055e121a3251690b225327b56.png",
       "desc": "专车自驾"
     }, {
-      "id": "0007",
-      "imgurl": "https://picbed.qunarzz.com/25e3b9f17a21a6e0113c57a23ffccde4.png",
-      "desc": "周边短游"
+      "id": "0003",
+      "imgurl": "https://picbed.qunarzz.com/5b6737be49ca243072ca614f07803b83.png",
+      "desc": "赚钱·信用卡"
     }, {
-      "id": "0008",
+      "id": "0004",
+      "imgurl": "https://picbed.qunarzz.com/1e107321f5396ea4994cd832232ecf8a.png",
+      "desc": "旅游团购"
+    }, {
+      "id": "0005",
       "imgurl": "https://picbed.qunarzz.com/c65b3bb7571a6bd62df669213e44b84d.png",
       "desc": "一日游"
     }, {
-      "id": "0009",
-      "imgurl": "https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png",
-      "desc": "自由行"
+      "id": "0006",
+      "imgurl": "https://picbed.qunarzz.com/f6bb08a239ce1b038204120a8d1e4669.png",
+      "desc": "特惠酒店"
     }, {
-      "id": "0010",
+      "id": "0007",
+      "imgurl": "https://picbed.qunarzz.com/3a08f360e958ccb2b947049387873ace.png",
+      "desc": "借钱"
+    }, {
+      "id": "0008",
+      "imgurl": "https://picbed.qunarzz.com/19b4f6d2fabd617789fa5aad65b249da.png",
+      "desc": "白金卡"
+    }, {
+      "id": "0009",
       "imgurl": "https://img1.qunarzz.com/order/comp/2007/23/734c3c62d2adce02.png",
       "desc": "行程设计"
+    }, {
+      "id": "0010",
+      "imgurl": "https://picbed.qunarzz.com/25e3b9f17a21a6e0113c57a23ffccde4.png",
+      "desc": "周边短游"
     }],
     "recommendList": [{
         "id": "0001",
@@ -76,23 +76,23 @@ export const indexJson = {
       }],
     "weekendList": [{
         "id": "0001",
-        "imgUrl": "//img1.qunarzz.com/sight/p0/1603/8f/8fff2332dff679ec90.water.jpg_256x160_224237e3.jpg",
+        "imgUrl": "https://tse3-mm.cn.bing.net/th/id/OIP.BdqfUPETNGQ8KHQOE8sB-wHaE8?w=296&h=198&c=7&o=5&dpr=1.56&pid=1.7",
         "title": "水乡古镇九十九，不如南浔走一走"
       }, {
         "id": "0002",
-        "imgUrl": "//img1.qunarzz.com/sight/p0/1607/21/2142167d4b1bfa84b4.water.jpg_256x160_ea65b4f7.jpg",
+        "imgUrl": "https://tse3-mm.cn.bing.net/th/id/OIP.DN6P4BU5K1ec4GazQtFWZgHaEa?w=305&h=182&c=7&o=5&dpr=1.56&pid=1.7",
         "title": "人间清净地 | 朝圣看日出"
       }, {
         "id": "0003",
-        "imgUrl": "//img1.qunarzz.com/sight/p0/1601/1c/1cdfd6a29fd1813990.img.jpg_256x160_87ff1663.jpg",
+        "imgUrl": "https://tse3-mm.cn.bing.net/th/id/OIP.4TTAEBj7sPlUjUd7GIcuFAHaEz?w=308&h=200&c=7&o=5&dpr=1.56&pid=1.7",
         "title": "水墨西塘让你感受古镇千年的诗情画意"
       }, {
         "id": "0004",
-        "imgUrl": "//tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/5a11974656794b4715156501be10c1b7.jpg",
+        "imgUrl": "https://tse2-mm.cn.bing.net/th/id/OIP.HqjP-X03lIcNe3IEN32Z3QHaEw?w=291&h=187&c=7&o=5&dpr=1.56&pid=1.7",
         "title": "厦门，带娃出行与幸福同行"
       }, {
         "id": "0005",
-        "imgUrl": "//tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/7d9b233c71cad13ded0013f9c9cec635.jpg",
+        "imgUrl": "https://tse1-mm.cn.bing.net/th/id/OIP.s73cCL7EjRDRErYHcUi57gHaEc?w=322&h=193&c=7&o=5&dpr=1.56&pid=1.7",
         "title": "驾一叶扁舟，寻江南往事"
       }]
   }
