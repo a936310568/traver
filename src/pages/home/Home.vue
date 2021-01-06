@@ -17,8 +17,9 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
+import {indexJson} from '../../../static/mock/index'
 // 导入获取Ajax数据插件
-import axios from 'axios'
+// import axios from 'axios'
 import { mapState } from 'vuex'
 export default {
   name: 'Home',
@@ -48,13 +49,13 @@ export default {
     getHomeInfo () {
       // 在config下的index.js中配置proxyTable
       // 将city放在ajax请求之中
-      axios.get('/api/index.json?city=' + this.city)
-      // axios返回的结果是一个promiss对象
-        .then(this.getHomeInfoSucc)
+      // axios.get('/api/index.json?city=' + this.city)
+      // // axios返回的结果是一个promiss对象
+      //   .then(this.getHomeInfoSucc)
+
+      this.getHomeInfoSucc(indexJson)
     },
     getHomeInfoSucc (res) {
-      // 拿到Ajax数据
-      res = res.data
       // 如果后端正确的返回了结果并且res里面有data这个内容项
       if (res.ret && res.data) {
         const data = res.data

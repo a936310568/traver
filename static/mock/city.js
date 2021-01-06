@@ -1,4 +1,4 @@
-{
+export const cityJson = {
 	"ret": true,
 	"data":{
 		"hotCities": [{

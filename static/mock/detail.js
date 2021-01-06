@@ -1,4 +1,4 @@
-{
+export const detailJson = {
   "ret": true,
   "data": {
     "bannerImg": "https://img1.qunarzz.com/travel/d1/1809/33/dd87f86934f20ab5.jpg_r_680x382x95_8851640e.jpg",

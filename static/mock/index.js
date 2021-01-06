@@ -1,4 +1,4 @@
-{
+export const indexJson = {
   "ret": true,
   "data": {
     "swiperList": [{
