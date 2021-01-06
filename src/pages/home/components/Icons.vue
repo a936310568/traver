@@ -4,7 +4,7 @@
             <swiper-slide>
                 <div class="icon" v-for="item of list" :key="item.id">
                     <div class="icon-img">
-                        <img class="icon-img-content" :src="item.imgurl">
+                      <img class="icon-img-content" :src="item.imgUrl">
                     </div>
                     <p class="icon-desc">{{item.desc}}</p>
                 </div>
